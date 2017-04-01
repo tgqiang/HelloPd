@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tay.hellopd.MainActivity">
+
+    <Switch
+        android:text="Tap to toggle sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/soundToggleSwitch" />
+
+    <TextView
+        android:text="Accelerometer X:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/accXLabel" />
+
+    <TextView
+        android:text="Accelerometer Y:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accXLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"
+        android:id="@+id/accYLabel" />
+
+    <TextView
+        android:text="Accelerometer Z:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accYLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/accZLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/soundToggleSwitch"
+        android:layout_alignEnd="@+id/soundToggleSwitch"
+        android:id="@+id/accXValue"
+        android:text="None" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/accZLabel"
+        android:layout_alignRight="@+id/accYValue"
+        android:layout_alignEnd="@+id/accYValue"
+        android:id="@+id/accZValue"
+        android:text="None" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/accYValue"
+        android:text="None"
+        android:layout_alignBaseline="@+id/accYLabel"
+        android:layout_alignBottom="@+id/accYLabel"
+        android:layout_alignLeft="@+id/accXValue"
+        android:layout_alignStart="@+id/accXValue" />
+
+    <TextView
+        android:text="Adjusted:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accZLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="78dp"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:text="None"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/accZValue"
+        android:layout_alignEnd="@+id/accZValue"
+        android:id="@+id/adjustedX" />
+
+    <TextView
+        android:text="None"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adjustedX"
+        android:layout_alignRight="@+id/adjustedX"
+        android:layout_alignEnd="@+id/adjustedX"
+        android:layout_marginTop="34dp"
+        android:id="@+id/adjustedY" />
+
+    <TextView
+        android:text="None"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adjustedY"
+        android:layout_alignRight="@+id/adjustedY"
+        android:layout_alignEnd="@+id/adjustedY"
+        android:layout_marginTop="36dp"
+        android:id="@+id/adjustedZ" />
+</RelativeLayout>
