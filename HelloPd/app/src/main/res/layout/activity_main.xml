@@ -10,107 +10,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.tay.hellopd.MainActivity">
 
-    <Switch
-        android:text="Tap to toggle sound"
+
+    <TextView
+        android:text="Select which instrument should the app emulate:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/formLabel" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formLabel"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/instrumentSelections" >
+
+        <RadioButton
+            android:text="Drum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/drumSelect"
+            android:layout_weight="1"
+            android:checked="false" />
+
+        <RadioButton
+            android:text="Bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bellSelect"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Piano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pianoSelect"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <Button
+        android:text="START"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/soundToggleSwitch" />
-
-    <TextView
-        android:text="Accelerometer X:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/accXLabel" />
-
-    <TextView
-        android:text="Accelerometer Y:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/accXLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="22dp"
-        android:id="@+id/accYLabel" />
-
-    <TextView
-        android:text="Accelerometer Z:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/accYLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/accZLabel" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/soundToggleSwitch"
-        android:layout_alignEnd="@+id/soundToggleSwitch"
-        android:id="@+id/accXValue"
-        android:text="None" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/accZLabel"
-        android:layout_alignRight="@+id/accYValue"
-        android:layout_alignEnd="@+id/accYValue"
-        android:id="@+id/accZValue"
-        android:text="None" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/accYValue"
-        android:text="None"
-        android:layout_alignBaseline="@+id/accYLabel"
-        android:layout_alignBottom="@+id/accYLabel"
-        android:layout_alignLeft="@+id/accXValue"
-        android:layout_alignStart="@+id/accXValue" />
-
-    <TextView
-        android:text="Adjusted:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/accZLabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="78dp"
-        android:id="@+id/textView" />
-
-    <TextView
-        android:text="None"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/accZValue"
-        android:layout_alignEnd="@+id/accZValue"
-        android:id="@+id/adjustedX" />
-
-    <TextView
-        android:text="None"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/adjustedX"
-        android:layout_alignRight="@+id/adjustedX"
-        android:layout_alignEnd="@+id/adjustedX"
-        android:layout_marginTop="34dp"
-        android:id="@+id/adjustedY" />
-
-    <TextView
-        android:text="None"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/adjustedY"
-        android:layout_alignRight="@+id/adjustedY"
-        android:layout_alignEnd="@+id/adjustedY"
-        android:layout_marginTop="36dp"
-        android:id="@+id/adjustedZ" />
+        android:id="@+id/proceedButton" />
 </RelativeLayout>
